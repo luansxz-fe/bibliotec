@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliotec - Sua Biblioteca Digital</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./public/Camada_1.svg" type="image/x-icon">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container">
+      <div class="logo">
+        <img src="./public/Camada_1.svg" alt="Logo Bibliotec">
+        <h1>BIBLIOTEC</h1>
+      </div>
+      <nav class="navegacao">
+        <a href="#" class="ativo">Início</a>
+        <a href="#">Catálogo</a>
+        <a href="#">Reservas</a>
+        <a href="#">Favoritos</a>
+        <button class="btn-login" id="loginBtn">Entrar</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Principal -->
+    <section class="container-banner">
+      <div class="container-texto-banner">
+        <h2>Bem-vindo à BIBLIOTEC</h2>
+        <p>Descubra um mundo de conhecimento através dos nossos livros</p>
+        <div class="busca">
+          <input type="text" id="campoBusca" placeholder="Buscar livros por título, autor ou assunto...">
+          <button onclick="buscarLivros()">Buscar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Livros em Destaque -->
+    <h2 class="titulo-principal">Livros em Destaque</h2>
+
+    <section class="container-livros">
+      <div class="container-livros-titulo">
+        <h3>Literatura Brasileira</h3>
+        <img src="./public/Camada_1.svg" alt="ornaments" class="ornaments">
+      </div>
+
+      <div class="container-livros-produtos" id="literaturaBrasileira">
+        <!-- Livros serão carregados pelo JavaScript -->
+      </div>
+    </section>
+
+    <!-- Livros Internacionais -->
+    <section class="container-livros">
+      <div class="container-livros-titulo">
+        <h3>Literatura Internacional</h3>
+        <img class="ornaments" src="./public/Camada_1.svg">
+      </div>
+
+      <div class="container-livros-produtos" id="literaturaInternacional">
+        <!-- Livros serão carregados pelo JavaScript -->
+      </div>
+    </section>
+
+    <!-- Livros Acadêmicos -->
+    <section class="container-livros">
+      <div class="container-livros-titulo">
+        <h3>Livros Acadêmicos</h3>
+        <img class="ornaments" src="./public/Camada_1.svg">
+      </div>
+
+      <div class="container-livros-produtos" id="livrosAcademicos">
+        <!-- Livros serão carregados pelo JavaScript -->
+      </div>
+    </section>
+
+    <!-- Serviços da Biblioteca -->
+    <section class="container-servicos">
+      <div class="container-servicos-titulo">
+        <h3>Nossos Serviços</h3>
+        <img src="./public/Camada_1.svg" alt="ornaments" class="ornaments">
+      </div>
+
+      <div class="container-servicos-lista">
+        <div class="container-servico">
+          <img src="./public/emprestimo.png" alt="Empréstimo de Livros">
+          <h4>Empréstimo de Livros</h4>
+          <p>Leve os livros para casa por até 15 dias.</p>
+          <button class="btn-servico" onclick="solicitarServico('Empréstimo')">Solicitar</button>
+        </div>
+
+        <div class="container-servico">
+          <img src="./public/reserva.jpg" alt="Reserva Online">
+          <h4>Reserva Online</h4>
+          <p>Reserve seus livros favoritos pelo site.</p>
+          <button class="btn-servico" onclick="solicitarServico('Reserva')">Solicitar</button>
+        </div>
+
+        <div class="container-servico">
+          <img src="./public/espaço.jpg" alt="Espaço de Estudo">
+          <h4>Espaço de Estudo</h4>
+          <p>Ambiente silencioso para estudos e pesquisas.</p>
+          <button class="btn-servico" onclick="solicitarServico('Espaço de Estudo')">Solicitar</button>
+        </div>
+
+        <div class="container-servico">
+          <img src="./public/computadores.jpg" alt="Acesso a Computadores">
+          <h4>Acesso a Computadores</h4>
+          <p>Computadores com internet para pesquisa.</p>
+          <button class="btn-servico" onclick="solicitarServico('Acesso a Computadores')">Solicitar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section class="container-eventos">
+      <div class="container-eventos-titulo">
+        <h3>Próximos Eventos</h3>
+        <img src="./public/Camada_1.svg" alt="ornaments" class="ornaments">
+      </div>
+
+      <div class="container-eventos-lista">
+        <div class="container-evento">
+          <img src="./public/clubedeleitura.jpg" alt="Clube de Leitura">
+          <h4>Clube de Leitura</h4>
+          <p>Discussão sobre "Dom Casmurro" de Machado de Assis</p>
+          <p class="data-evento">15 de Outubro, 19h</p>
+          <button class="btn-evento" onclick="inscreverEvento('Clube de Leitura')">Inscrever-se</button>
+        </div>
+
+        <div class="container-evento">
+          <img src="./public/oficina.jpg" alt="Oficina de Escrita">
+          <h4>Oficina de Escrita Criativa</h4>
+          <p>Aprenda técnicas para desenvolver sua escrita</p>
+          <p class="data-evento">22 de Outubro, 14h</p>
+          <button class="btn-evento" onclick="inscreverEvento('Oficina de Escrita')">Inscrever-se</button>
+        </div>
+
+        <div class="container-evento">
+          <img src="./public/palestra.jpg" alt="Palestra">
+          <h4>Palestra: Literatura Contemporânea</h4>
+          <p>Com a escritora premiada Ana Silva</p>
+          <p class="data-evento">30 de Outubro, 16h</p>
+          <button class="btn-evento" onclick="inscreverEvento('Palestra')">Inscrever-se</button>
+        </div>
+
+        <div class="container-evento">
+          <img src="./public/exposicao.jpg" alt="Exposição">
+          <h4>Exposição de Livros Raros</h4>
+          <p>Conheça edições especiais e históricas</p>
+          <p class="data-evento">5 de Novembro, 10h</p>
+          <button class="btn-evento" onclick="inscreverEvento('Exposição')">Inscrever-se</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="info-rodape">
+        <div class="contato">
+          <h3>Contato</h3>
+          <p>Email: l.ferreira0989@gmail.com</p>
+          <p>Telefone: (11) 95364-0743</p>
+          <p>Endereço: Senai</p>
+        </div>
+        <div class="horario">
+          <h3>Horário de Funcionamento</h3>
+          <p>Segunda a Sexta: 7h às 17h</p>
+          <p>Sábados: 12h às 15h</p>
+          <p>Domingos: 12h às 14h</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 BIBLIOTEC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Login -->
+  <div class="modal" id="modalLogin">
+    <div class="modal-conteudo">
+      <span class="fechar-modal" onclick="fecharModal('modalLogin')">&times;</span>
+      <h2>Entrar na BIBLIOTEC</h2>
+      <form id="formLogin">
+        <div class="grupo-form">
+          <input type="email" placeholder="E-mail" required>
+        </div>
+        <div class="grupo-form">
+          <input type="password" placeholder="Senha" required>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <p class="texto-modal">Não tem conta? <a href="#" onclick="abrirCadastro()">Cadastre-se</a></p>
+    </div>
+  </div>
+
+  <!-- Modal de Cadastro -->
+  <div class="modal" id="modalCadastro">
+    <div class="modal-conteudo">
+      <span class="fechar-modal" onclick="fecharModal('modalCadastro')">&times;</span>
+      <h2>Cadastrar na BIBLIOTEC</h2>
+      <form id="formCadastro">
+        <div class="grupo-form">
+          <input type="text" placeholder="Nome completo" required>
+        </div>
+        <div class="grupo-form">
+          <input type="email" placeholder="E-mail" required>
+        </div>
+        <div class="grupo-form">
+          <input type="password" placeholder="Senha" required>
+        </div>
+        <div class="grupo-form">
+          <input type="password" placeholder="Confirmar senha" required>
+        </div>
+        <button type="submit">Cadastrar</button>
+      </form>
+      <p class="texto-modal">Já tem conta? <a href="#" onclick="abrirLogin()">Faça login</a></p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

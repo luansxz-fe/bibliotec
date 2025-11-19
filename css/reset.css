@@ -1,0 +1,54 @@
+/* Reset CSS - Remove margens, preenchimentos e define box-sizing para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset de elementos HTML5 para display block */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Remove estilos de lista */
+ol, ul {
+  list-style: none;
+}
+
+/* Remove citações */
+blockquote, q {
+  quotes: none;
+}
+
+/* Remove conteúdo antes e depois de citações */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* Define tabelas com colapsso de bordas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove sublinhado de links e herda cor */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove estilo padrão de botões */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Define que inputs, textareas e selects herdam a fonte */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
