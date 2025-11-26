@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIBLIOTEC - Login</title>
+    <title>BIBLIOTEC - Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cadastrar.css">
 </head>
@@ -11,17 +11,19 @@
     <div class="auth-container">
         <div class="logo">
             <h1>BIBLIOTEC</h1>
-            <p>Sua Biblioteca Digital</p>
+            <p>Crie sua conta</p>
         </div>
         
-        <form class="auth-form" id="loginForm">
+        <form class="auth-form" id="cadastroForm">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="E-mail" required>
             <input type="text" placeholder="Usuário" required>
             <input type="password" placeholder="Senha" required>
-            <button type="submit" class="btn-primary">Entrar</button>
+            <button type="submit" class="btn-primary">Cadastrar</button>
         </form>
         
         <p class="auth-link">
-            Não tem conta? <a href="cadastrar.html">Cadastre-se</a>
+            Já tem conta? <a href="index.html">Faça login</a>
         </p>
     </div>
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOTEC - Favoritos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/favoritos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>BIBLIOTEC</h1>
+            </div>
+            <nav class="nav">
+                <a href="catalogos.html" class="nav-btn">Catálogo</a>
+                <a href="reservas.html" class="nav-btn">Reservas</a>
+                <a href="favoritos.html" class="nav-btn active">Favoritos</a>
+                <button class="login-btn" onclick="sair()">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Meus Favoritos</h2>
+                <p>Livros que você ama</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="livros-grid" id="favoritos-container"></div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

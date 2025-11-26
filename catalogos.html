@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOTEC - Catálogo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalogos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>BIBLIOTEC</h1>
+            </div>
+            <nav class="nav">
+                <a href="catalogos.html" class="nav-btn active">Catálogo</a>
+                <a href="reservas.html" class="nav-btn">Reservas</a>
+                <a href="favoritos.html" class="nav-btn">Favoritos</a>
+                <button class="login-btn" onclick="sair()">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Catálogo de Livros</h2>
+                <p>Encontre seu próximo livro favorito</p>
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Buscar por título ou autor...">
+                    <button onclick="buscarLivros()">🔍 Buscar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="livros-grid" id="livros-container"></div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
